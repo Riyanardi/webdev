@@ -1,0 +1,87 @@
+
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body {
+   background: url(""../img/deaebeb7e84220dbf1a586bd1bcb3a14.jpg) top right;
+}
+
+#page {
+    width: 800px;
+    height: 150px;
+    background-color: rgb(190, 146, 88);
+    padding: 20px;
+    clear: both;
+}
+
+h1 {
+    color: rgb(100, 95, 95);
+    font-size: 32px;
+    
+
+}
+
+div > p {
+    margin: 50px 0 10px 0;
+    color: brown;
+}
+
+p::first-letter {
+    color: rgb(22, 22, 22);
+    font-size: x-large;
+}
+span {
+    color: yellow;
+    font-style: italic;
+}
+a {
+    color:blanchedalmond;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    background-color: yellow;
+    border: none;
+    padding: 10px 10px;
+    color: brown;
+}
+
+.box {
+    /*visibility: hidden;*/
+    /*display: none;*/
+    width: 390px;
+    float: left;
+    display: inline;
+    background-color: rgb(40, 177, 177);
+    color: azure;
+    padding: 20px;
+    margin-left: 10px;
+}
+.gridsatu {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.item {
+    margin: 10px;
+    height: 100px;
+    background-color: aquamarine;
+    
+}
+.flexcontainer1 {
+    display: flex;
+    flex-direction: column;
+}
+.item {
+    margin: 10px;
+    width: 10%;
+    height: 100px;
+    background-color: aquamarine;
+    
+}
