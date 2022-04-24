@@ -1,0 +1,148 @@
+
+Setting environment for using XAMPP for Windows.
+Administrator@WIN-S6VQLI514Q0 c:\xampp
+# mysql -u root -p
+Enter password: *
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+Administrator@WIN-S6VQLI514Q0 c:\xampp
+# mysql -u root -p
+Enter password: ***
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+
+Administrator@WIN-S6VQLI514Q0 c:\xampp
+# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 176
+Server version: 10.4.22-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mahasiswa          |
+| mysql              |
+| nayamul film       |
+| performance_schema |
+| phpmyadmin         |
+| test               |
+| wordpress          |
++--------------------+
+8 rows in set (0.001 sec)
+
+MariaDB [(none)]> CREATE DATABASE mahasiswaa;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> CREATE TABLE mahasiswaa (
+    -> NO int(11),
+    -> NIM int,
+    -> Nama varchar(255),
+    -> Tempat lahir varchar(255),
+    -> Tanggallahir varchar(255),
+    -> Alamat varchar(255),
+    -> );
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> USE mahasiswaa;
+Database changed
+MariaDB [mahasiswaa]> CREATE DATABASE mahasiswa (
+    -> NO int(11),
+    -> NIM int(11),
+    -> Jeniskelamin varchar(255),
+    -> Tempatlahir varchar(255),
+    -> Tanggallahir varchar(255),
+    -> Alamat varchar(255),
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(
+NO int(11),
+NIM int(11),
+Jeniskelamin varchar(255),
+Tempatlahir varchar(255...' at line 1
+MariaDB [mahasiswaa]> CREATE TABLE mahasiswaa (
+    -> No int(11),
+    -> NIM int(11),
+    -> Jeniskelamin varchar(255),
+    -> Tempatlahir varchar(255),
+    -> Tanggallahir varchar(255),
+    -> Alamat varchar(255)
+    -> );
+Query OK, 0 rows affected (0.020 sec)
+
+MariaDB [mahasiswaa]> show table
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [mahasiswaa]> SHOW TABLE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [mahasiswaa]> show table
+    -> :
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':' at line 2
+MariaDB [mahasiswaa]> show tables
+    -> ;
++----------------------+
+| Tables_in_mahasiswaa |
++----------------------+
+| mahasiswaa           |
++----------------------+
+1 row in set (0.001 sec)
+
+MariaDB [mahasiswaa]> INSERT INTO mahasiswaa VALUS (1,19280001,'dian','surabaya',12-09-2002','Jl.semangka NO 3');
+    '> ;
+    '> /c
+    '> ;
+    '> INSERT INTO mahasiswaa VALUS (1,19280001,'dian','surabaya',12-09-2002','Jl.semangka NO.3');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'VALUS (1,19280001,'dian','surabaya',12-09-2002','Jl.semangka NO 3');
+;
+/c
+;
+I...' at line 1
+MariaDB [mahasiswaa]> INSERT INTO mahasiswaa VALUS (1,19280001,'dian','surabaya',12-09-2002','Jl.semangka NO.3');
+    '> INSERT INTO mahasiswaa VALUS (1,19280001,'dian','surabaya',12-09-2002','Jl.semangka NO.3');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'VALUS (1,19280001,'dian','surabaya',12-09-2002','Jl.semangka NO.3');
+INSERT I...' at line 1
+MariaDB [mahasiswaa]> INSERT INTO mahasiswaa VALUS (1,19280001,dian,surabaya,12-09-2002,Jl.semangka No.3);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'VALUS (1,19280001,dian,surabaya,12-09-2002,Jl.semangka No.3)' at line 1
+MariaDB [mahasiswaa]> INSERT INTO mahasiswaa VALUS (1,19280001,'Dian",'Surabaya','12-09-2002','Jl.semangka No.3');
+    '> INSERT INTO mahasiswaa VALUES (1,19280001,'Dian",'Surabaya','12-09-2002','Jl.semangka No.3');
+    "> /c
+    ">  INSERT INTO mahasiswaa VALUES (1,19280001,'Dian",'Surabaya','12-09-2002','Jl.semangka No.3');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'VALUS (1,19280001,'Dian",'Surabaya','12-09-2002','Jl.semangka No.3');
+INSERT ...' at line 1
+MariaDB [mahasiswaa]>  INSERT INTO mahasiswaa VALUES (1,19280001,'Dian','Surabaya','12-09-2002','Jl.semangka No.3');
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [mahasiswaa]> select * from mahasiswaa
+    -> ;
++------+----------+--------------+-------------+--------------+------------------+
+| No   | NIM      | Jeniskelamin | Tempatlahir | Tanggallahir | Alamat           |
++------+----------+--------------+-------------+--------------+------------------+
+|    1 | 19280001 | Dian         | Surabaya    | 12-09-2002   | Jl.semangka No.3 |
++------+----------+--------------+-------------+--------------+------------------+
+1 row in set (0.000 sec)
+
+MariaDB [mahasiswaa]>
+MariaDB [mahasiswaa]> INSERT INTO mahasiswaa VALUES (
+    -> 1,
+    -> 19280001,
+    -> 'Dian',
+    -> 'Surabaya',
+    -> '12-09-2002',
+    -> 'Jl.semangka No.3'
+    -> );
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [mahasiswaa]> select * from mahasiswaa
+    -> ;
++------+----------+--------------+-------------+--------------+------------------+
+| No   | NIM      | Jeniskelamin | Tempatlahir | Tanggallahir | Alamat           |
++------+----------+--------------+-------------+--------------+------------------+
+|    1 | 19280001 | Dian         | Surabaya    | 12-09-2002   | Jl.semangka No.3 |
+|    1 | 19280001 | Dian         | Surabaya    | 12-09-2002   | Jl.semangka No.3 |
++------+----------+--------------+-------------+--------------+------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [mahasiswaa]>
