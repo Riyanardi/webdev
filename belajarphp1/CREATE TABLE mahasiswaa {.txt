@@ -1,0 +1,11 @@
+CREATE TABLE mahasiswaa {
+    no int(11),
+     nim int(11),
+     nama varchar(11),
+     Jeniskelamin varchar(255),
+     Tempatlahir varchar(255),
+     Tanggallahir varchar(255),
+     Alamat varchar(255)
+};
+     
+     

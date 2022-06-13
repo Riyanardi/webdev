@@ -1,0 +1,8 @@
+CREATE TABLE Persons (
+    NO int(11),
+    NIM int(11)'
+    Jeniskelamin varchar(255),
+    Tempatlahir varchar(255),
+    Tanggallahir varchar(255),
+    Alamat varchar(255)
+);

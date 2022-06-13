@@ -1,0 +1,56 @@
+.a{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.body{
+    background-image: url(../Img/deaebeb7e84220dbf1a586bd1bcb3a14.jpg) top ;
+}
+#page{
+    width: 800px;
+    height: 100px;
+    background-color: aquamarine;
+    padding: 20px;
+    clear: both;
+
+}
+.h1{
+    color: bisque;
+    font-size: 32px;
+}
+.div p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: bisque;
+}
+p::first-letter{
+    color: #8888;
+    font-size: xx-large;
+}
+
+.spam{
+    color: yellow;
+    font-style: italic;
+}
+.a{
+    color: blue;
+    text-decoration: none;
+
+}
+.input{
+
+}
+.grid-box1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+.grid-box1 {
+    display: flex;
+   flex direction: column;
+}
+.item{
+
+    margin: 10px;
+    height: 10px;
+    background-color: antiquewhite;
+}
